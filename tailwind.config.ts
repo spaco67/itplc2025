@@ -78,27 +78,14 @@ const config: Config = {
             height: '0',
           },
         },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in-scale': 'fade-in-scale 0.7s ease-out',
-        'text-shimmer': 'text-shimmer 3s ease-out infinite alternate',
-        'fade-in-scale': 'fade-in-scale 0.5s ease-out',
-      },
-      keyframes: {
-        'fade-in-scale': {
+        'fade-in': {
           '0%': {
             opacity: '0',
-            transform: 'scale(0.95)',
           },
           '100%': {
             opacity: '1',
-            transform: 'scale(1)',
           },
         },
-      },
-      keyframes: {
         'fade-in-scale': {
           '0%': {
             opacity: '0',
@@ -117,6 +104,13 @@ const config: Config = {
             'background-position': '100% 50%',
           },
         },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.7s ease-out',
+        'fade-in-scale': 'fade-in-scale 0.7s ease-out',
+        'text-shimmer': 'text-shimmer 3s ease-out infinite alternate',
       },
       backgroundImage: {
         'grid-pattern': 'linear-gradient(to right, #E2E8F0 1px, transparent 1px), linear-gradient(to bottom, #E2E8F0 1px, transparent 1px)',
