@@ -11,8 +11,8 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'grid-pattern': 'linear-gradient(to right, #E2E8F0 1px, transparent 1px), linear-gradient(to bottom, #E2E8F0 1px, transparent 1px)',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -63,28 +63,16 @@ const config: Config = {
       },
       keyframes: {
         'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
         'fade-in': {
-          '0%': {
-            opacity: '0',
-          },
-          '100%': {
-            opacity: '1',
-          },
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
         'fade-in-scale': {
           '0%': {
@@ -97,12 +85,8 @@ const config: Config = {
           },
         },
         'text-shimmer': {
-          '0%': {
-            'background-position': '0% 50%',
-          },
-          '100%': {
-            'background-position': '100% 50%',
-          },
+          '0%': { 'background-position': '0% 50%' },
+          '100%': { 'background-position': '100% 50%' },
         },
       },
       animation: {
@@ -112,9 +96,6 @@ const config: Config = {
         'fade-in-scale': 'fade-in-scale 0.7s ease-out',
         'text-shimmer': 'text-shimmer 3s ease-out infinite alternate',
       },
-      backgroundImage: {
-        'grid-pattern': 'linear-gradient(to right, #E2E8F0 1px, transparent 1px), linear-gradient(to bottom, #E2E8F0 1px, transparent 1px)',
-      },
       backgroundSize: {
         'grid': '4rem 4rem',
       },
@@ -122,4 +103,5 @@ const config: Config = {
   },
   plugins: [require('tailwindcss-animate')],
 };
+
 export default config;
