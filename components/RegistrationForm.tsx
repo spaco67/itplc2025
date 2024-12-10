@@ -33,7 +33,7 @@ const formSchema = z.object({
   email: z.string().email('Invalid email address'),
   designation: z.string().min(2, 'Designation is required'),
   gender: z.enum(['Male', 'Female']),
-  age: z.string().transform((val) => parseInt(val, 10)),
+  age: z.string().min(1, 'Age is required'),
   zoneMinistryCenter: z.string().min(2, 'Zone/Ministry center is required'),
 });
 

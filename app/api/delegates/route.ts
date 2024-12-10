@@ -7,16 +7,11 @@ export async function POST(request: Request) {
     const data = await request.json();
     console.log('Received registration data:', data);
     
-    // Convert age to string to match schema
-    const delegateData = {
-      ...data,
-      age: String(data.age)
-    };
-
-    console.log('Attempting to create delegate with data:', delegateData);
-
     const delegate = await prisma.delegate.create({
-      data: delegateData,
+      data: {
+        ...data,
+        // age is already a string, no conversion needed
+      },
     });
 
     console.log('Successfully created delegate:', delegate);
