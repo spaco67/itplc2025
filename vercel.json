@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "buildCommand": "npm run force-build",
-  "ignoreCommand": "npx --no -- prisma generate",
   "builds": [
     {
       "src": "package.json",
       "use": "@vercel/next",
       "config": {
-        "skipBuild": true
+        "prebuild": "prisma generate"
       }
     }
-  ]
-} 
+  ],
+  "env": {
+    "PRISMA_GENERATE_DATAPROXY": "true"
+  }
+}
